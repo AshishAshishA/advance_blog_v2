@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Some Great Blog</title>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss@2.0.0/simple-v1.css">
+    <style>
+
+        /* reginstration page */
+        /* styles.css */
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style different message types */
+.messages li.info {
+    background-color: #d1ecf1; /* Light blue for info messages */
+    color: #0c5460;
+}
+
+.messages li.success {
+    background-color: #d4edda; /* Light green for success messages */
+    color: #155724;
+}
+
+.messages li.warning {
+    background-color: #fff3cd; /* Light yellow for warning messages */
+    color: #856404;
+}
+
+.messages li.error {
+    background-color: #f8d7da; /* Light red for error messages */
+    color: #721c24;
+}
+
+        /*  */
+        /* login page */
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .messages {
+            list-style: none;
+            padding: 0;
+        }
+
+        .messages li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style different message types */
+        .messages li.info {
+            background-color: #d1ecf1; /* Light blue for info messages */
+            color: #0c5460;
+        }
+
+        .messages li.success {
+            background-color: #d4edda; /* Light green for success messages */
+            color: #155724;
+        }
+
+        .messages li.warning {
+            background-color: #fff3cd; /* Light yellow for warning messages */
+            color: #856404;
+        }
+
+        .messages li.error {
+            background-color: #f8d7da; /* Light red for error messages */
+            color: #721c24;
+        }
+
+        /*  */
+        body{
+            background-image: url('/static/images/front1.png');
+        }
+
+        .py-5{
+            opacity: 0.7; 
+            padding-left: 4%; 
+            margin-top: 5%;
+            margin-bottom:5%;
+            width: 60%;
+            border-radius: 2%;
+            background-color: rgb(42, 114, 173);
+        }
+        .py-6{
+            opacity: 0.7; 
+            padding-left: 4%; 
+            margin:5%;
+            width: 65%;
+            border-radius: 2%;
+            background-color: rgb(42, 114, 173);
+        }
+        .contact{
+            position: bottom;
+            margin-top:500px;
+        }
+        .delete-message{
+            max-width: 20%;
+            min-width: 20%;
+            margin: 0;
+            color: #D8000C;
+            background-color: #FFBABA !important;
+            padding: 5px;
+        }
+        .delete-message ul li{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+{% block page_title %}{% endblock page_title %}
+{% block page_content %}{% endblock page_content %}
+</body>
+</html>

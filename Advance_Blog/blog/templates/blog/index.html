@@ -1,0 +1,43 @@
+{% extends "base1.html" %}
+{% block page_title %}
+    <h4>
+        <ul class="nav"style="list-style-type: none; margin: 0; padding: 0;">
+            <li class="bar"><a href="#">Home</a></li>
+            <li class="bar"><a href="{% url "login-signup" %}">Logout</a></li>
+            <li class="bar"><a href="{% url "profile" auth_id %}">Show Profile</a></li>
+        </ul>
+    </h4>
+    <h1><a href="{% url "blog-post" auth_id %}">Create Post</a></h1>
+    <h2>Blog Posts</h2>
+{% endblock %}
+
+{% block page_content %}
+    {% block post %}
+    <div class="blog-card">
+        <div class="meta">
+                {% for post in posts %}
+                <!-- <hr style="height:2px;border-width:0;color:black;background-color:black"> -->
+                <div class="main">
+                    <div class="title">
+                        <h2><li>{{post.title|upper}}</li></h2>
+                    </div>
+                    <div class="about">
+                        <ul>
+                            <li>Details:</li>
+                            <li class="author">Author:{{ post.authen.username }}</li>
+                            <li class="date">{{post.created_on.date}}|Categories</li>
+                        </ul>
+                    </div>
+                    <div class="text">
+                        <p>{{post.body|slice:"400"}}</p>
+                        <div class="button">
+                            <button><a onclick="window.location = 'blog-details/{{ post.slug }}/{{ post.pk }}/{{ auth_id }}'">Read More</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+        </div>
+    </div>       
+    {% endblock %}
+{% endblock %}

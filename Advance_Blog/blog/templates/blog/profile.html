@@ -1,0 +1,19 @@
+{% extends "base3.html" %}
+
+{% block page_title %}
+    <h2>Your Profile</h2>
+{% endblock %}
+
+{% block page_content %}
+    <h4>UserName: {{user.username}}</h4>
+    <hr>
+    <h3>Your Posts</h3>
+    <div class="posts">
+        {% for post in posts %}
+        <ul>
+            <li>{{post.title}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base2.html" %}
+
+{% block page_title %}
+    <h3>Welcome to BLOGPOST</h3>
+{% endblock %}
+
+{% block page_content %}
+    <input value="Log-In" type="button" onclick="location.href='{% url "log-in" %}'">
+    <input value="Sign-Up" type="button" onclick="location.href='{% url "sign-up" %}'">
+
+    <ul class="contact">
+        contact me:
+        <li><a href="mailto:ashishkr9214jmp@gmail.com?subject=Subject%20Here&body=Message%20Body%20Here" target="_blank">Email me</a></li>
+        <li> Call me : 7209783541 </li>
+    </ul>
+{% endblock %}
+
+

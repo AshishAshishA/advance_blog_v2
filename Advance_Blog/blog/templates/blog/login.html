@@ -1,0 +1,26 @@
+{% extends "base2.html" %}
+
+{% block page_title %}
+    <h3>Welcome to BLOGPOST</h3>
+{% endblock %}
+
+{% block page_content %}
+<!--Login--> 
+<div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form }}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/signup">Create an account</a>.</p>
+</div>
+
+{% endblock %}
