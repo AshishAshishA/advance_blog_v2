@@ -144,7 +144,7 @@ def blog_delete(request,auth_id,post_id):
             post.delete()
             return HttpResponseRedirect(reverse('blog-index',kwargs={"auth_id":auth_id}))
         else:
-            messages.error(request,"Invalid Password")
+            messages.error(request,"Not Your Blog")
         
     return render(request,'blog/post_confirm_delete.html',{"post":post,"auth_id":auth_id,"post_id":post_id})     
 

@@ -13,6 +13,7 @@
             padding: 0;
             overflow: hidden;
             background-color: #333;
+            box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.4);
             /* border-radius: 50%; */
         }
         .bar{
@@ -24,6 +25,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.4);
         }
         .bar a:hover{
             background-color: blue;
@@ -32,6 +34,7 @@
             background-color: wheat;
             padding: 2%;
             text-decoration: none;
+            box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.4);
         }
         h1 a:hover{
             background-color: whitesmoke;
@@ -67,7 +70,7 @@
         .main{
             display: flex;
             flex-direction: row;
-            margin: 20px auto;
+            margin: 60px auto;
             height: 200px;
             max-width: 100%;
             overflow: hidden;
@@ -190,7 +193,7 @@
     </style>
 </head>
 <body>
-<h1>Some Great Blog</h1>
+<h1 style="box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4); padding: 5px;">Some Great Blog</h1>
 
 {% block page_title %}{% endblock page_title %}
 {% block page_content %}{% endblock page_content %}
